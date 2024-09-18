@@ -4,7 +4,6 @@ import os
 import whisper
 import base64
 
-
 # Set the OpenAI API key
 openai_api_key = st.secrets["openai_api_key"]
 os.environ["OPENAI_API_KEY"] = openai_api_key
@@ -18,7 +17,7 @@ def wide_space_default():
 wide_space_default()
 
 # Load the Whisper model
-model = whisper.load_model('small')  # You can choose 'base', 'small', etc.
+model = whisper.load_model('medium')  # You can choose 'base', 'small', etc.
 
 # Initialize call "jars"
 call_jars = {
