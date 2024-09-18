@@ -4,6 +4,15 @@ import os
 import whisper
 import base64
 
+# Path where Render makes the secret files accessible
+secrets_path = '/etc/secrets/secrets.toml'
+
+if os.path.exists(secrets_path):
+    st.secrets.load(secrets_path)
+else:
+    st.error("Secrets file not found!")
+
+
 # Set the OpenAI API key
 openai_api_key = st.secrets["openai_api_key"]
 os.environ["OPENAI_API_KEY"] = openai_api_key
