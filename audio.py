@@ -17,7 +17,7 @@ def wide_space_default():
 wide_space_default()
 
 # Load the Whisper model
-model = whisper.load_model('medium')  # You can choose 'base', 'small', etc.
+model = whisper.load_model('small')  # You can choose 'base', 'small', etc.
 
 # Initialize call "jars"
 call_jars = {
